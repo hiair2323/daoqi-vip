@@ -17,8 +17,7 @@ func main() {
 		msg := gomail.NewMessage()
 		msg.SetHeader("To", sender)
 		msg.SetHeader("Subject", title)
-		msg.SetBody("text/plain", "您在专业研报终端-研报客的会员，还剩"+dou+"天将到期，豆子与推送到期将清零！请及时续费！")
-		msg.Attach("/data/" + title)
+		msg.SetBody("text/plain", "您在专业研报终端-研报客的会员，还剩"+dou+"天将到期，豆子与推送到期将清零！请及时续费！网页yanbaoke.com 手机app各大商店搜索 研报客")
 		msg.SetAddressHeader("From", "mail@sendfile.yanbaoke.net", "研报客-全球研报速达")
 		d := gomail.NewPlainDialer("192.168.1.20", 657, "mail", "360tHKWznZCY4Fy3")
 		d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
